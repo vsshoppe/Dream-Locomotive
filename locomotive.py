@@ -1,4 +1,4 @@
-import track,math,plot
+from math import *
 
 class locomotive:
     """Navigating locomotive that will follow tracks"""
@@ -26,7 +26,7 @@ class locomotive:
         x = 1
         y = (y2-y1)/(x2-x1)
         z = (z2-z1)/(x2-x1)
-        length = math.sqrt((x**2)+(y**2)+(z**2))
+        length = sqrt((x**2)+(y**2)+(z**2))
         sf = incr/length
 
         x3,y3,z3 = sf,(y*sf),(z*sf)
@@ -45,6 +45,6 @@ if __name__ == "__main__":
     humpty = locomotive((3,1,2))
     lenny = humpty.navigate((6,5,3),1)
     print lenny
-    print math.sqrt((lenny[0]**2)+(lenny[1]**2)+(lenny[2]**2))
+    print sqrt((lenny[0]**2)+(lenny[1]**2)+(lenny[2]**2))
     humpty.move(lenny)
     print humpty.pos
